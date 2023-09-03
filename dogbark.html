@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dog Barking Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #barkButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #barkButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Press the button to hear a dog bark!</h1>
+    <button id="barkButton">Bark</button>
+    <audio id="barkSound" src="dog_bark.wav"></audio>
+
+    <script>
+        const barkButton = document.getElementById('barkButton');
+        const barkSound = document.getElementById('barkSound');
+
+        barkButton.addEventListener('click', () => {
+            barkSound.play();
+        });
+    </script>
+</body>
+</html>
